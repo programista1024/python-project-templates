@@ -1,0 +1,28 @@
+# Ignore virtual environments
+venv/
+*/venv/
+*/.venv/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore environment and test logs
+.env
+*.log
+
+# Ignore compiled distributions
+dist/
+build/
+*.egg-info/
+
+# VS Code settings (optional, if user-specific)
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore generated ZIP archives
+*.zip
