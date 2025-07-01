@@ -6,18 +6,17 @@ Inspired by common project initializers (like Spring Boot Initializer), this rep
 
 ## 🚀 Features
 
-- 🧰 Predefined templates:
-  - `cli-app/` – Command-line interface using Typer and Rich
+- 🧰 Templates:
+  - `cli-app/` – Command-line app using Typer and Rich
   - `gui-app/` – Desktop GUI using PySide6
   - `api-server/` – REST API with FastAPI
-- 🔁 Common shell scripts:
-  - Creating and managing virtual environments
-  - Installing dependencies
-  - Initializing a clean folder structure
-- ✅ Typing and linting ready (`mypy`, `pylint`)
-- 🔧 Easily extendable with new templates
+- 🔁 Shell scripts for:
+  - Project initialization
+  - Virtual environment setup and dependency installation
+- ✅ Ready for static typing and linting (`mypy`, `pylint`)
+- 🔧 Easily extensible with new templates
 
-## 📦 Usage
+## 📦 Quick Start
 
 ```bash
 git clone https://github.com/programista1024/python-project-templates.git
@@ -31,73 +30,49 @@ chmod +x setup_env.sh init_project.sh
 
 # Enter project and set up environment
 cd projects/my_cli_tool
-./setup_env.sh
+../../setup_env.sh
 ```
 
 ## 📁 Repository structure
 
 ```
 python-project-templates/
-├── init_project.sh       # Project generator
-├── setup_env.sh          # venv and requirements installer
-├── templates/            # Template blueprints
+├── init_project.sh       # Project generator script
+├── setup_env.sh          # Virtual environment setup script
+├── templates/            # Starter templates
 │   ├── cli-app/
 │   ├── gui-app/
 │   └── api-server/
-└── projects/             # Your generated projects go here
+└── projects/             # Locally generated projects (gitignored)
 ```
 
-> **Note:** The `projects/` folder is listed in `.gitignore` and is not tracked by Git.  
+> **Note:** The `projects/` folder is currently empty and listed in `.gitignore`, so its contents are not tracked by Git.
 > This folder is intended for locally generated projects based on the templates.  
 > Each user can safely use this directory to experiment without affecting the repository.
 
-## 📁 templates/
+## 📚 Documentation
+For detailed usage, options, and examples, please see the docs/ folder:
 
-This directory contains ready-to-use Python starter templates. You can generate a new project by copying one of them into the `projects/` folder.
+* docs/init_project.md — project initialization script docs
+* docs/setup_env.md — virtual environment setup docs
+* docs/templates.md — template descriptions and usage
+* docs/usage_examples.md — example workflows and tips
 
-👉 Each template includes:
-- A main script (`main.py`)
-- A minimal `requirements.txt`
-- An optional `.vscode` folder for VS Code users
+## 🧪 Testing Templates Directly
 
----
+You can test templates before generating projects by:
 
-## 🧪 Testing templates directly (without generating a project)
-
-If you want to test a starter template before using the generator:
-
-1. Go to the selected template directory, e.g.:
-
-   ```bash
-   cd templates/cli-app
-   ```
-
-2. Create and activate a virtual environment:
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install the required dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Run the starter script:
-
-   ```bash
-   python main.py programista1024
-   ```
-
-Each template contains its own `requirements.txt` file with the necessary dependencies.
+```bash
+cd templates/cli-app       # or gui-app, api-server
+python3 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python main.py [required_args]
+```
 
 ## 🤝 How to contribute
 
-- Found a bug or have an idea? Open an issue or pull request.
-- Follow PEP8 and document your code.
-- Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon).
+Contributions and bug reports are welcome! Please check [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines..
 
 ## 📜 License
 

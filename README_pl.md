@@ -10,14 +10,13 @@ Projekt inspirowany popularnymi generatorami, takimi jak Spring Boot Initializer
   - `cli-app/` – aplikacja terminalowa (Typer + Rich)
   - `gui-app/` – aplikacja desktopowa (PySide6)
   - `api-server/` – API REST (FastAPI)
-- 🔁 Wspólne skrypty:
-  - Tworzenie środowiska `venv`
-  - Instalacja zależności
-  - Generowanie uporządkowanej struktury projektu
+- 🔁 Skrypty shellowe do:
+  - inicjalizacji projektu
+  - tworzenia środowiska wirtualnego i instalacji zależności
 - ✅ Przygotowane do typowania i lintowania (`mypy`, `pylint`)
 - 🔧 Możliwość łatwego rozszerzania o własne szablony
 
-## 📦 Jak używać?
+## 📦 Szybki start
 
 ```bash
 git clone https://github.com/programista1024/python-project-templates.git
@@ -31,73 +30,49 @@ chmod +x setup_env.sh init_project.sh
 
 # Przejdź do projektu i zainstaluj środowisko
 cd projects/moja_aplikacja
-./setup_env.sh
+../../setup_env.sh
 ```
 
 ## 📁 Struktura repozytorium
 
 ```
 python-project-templates/
-├── init_project.sh       # Generator projektów
-├── setup_env.sh          # Instalacja venv i zależności
-├── templates/            # Szablony projektów
+├── init_project.sh       # Skrypt generujący projekt
+├── setup_env.sh          # Skrypt konfigurujący środowisko wirtualne
+├── templates/            # Szablony startowe
 │   ├── cli-app/
 │   ├── gui-app/
 │   └── api-server/
-└── projects/             # Wygenerowane projekty
+└── projects/             # Lokalnie generowane projekty (ignorowane przez git)
 ```
 
-> **Uwaga:** Katalog `projects/` znajduje się na liście `.gitignore` i nie jest śledzony przez Git.  
-> Służy on do lokalnego tworzenia projektów na podstawie szablonów.  
+> **Uwaga:** Katalog `projects/` jest obecnie pusty i znajduje się na liście `.gitignore`, więc jego zawartość nie jest śledzona przez Git.
+> Ten katalog służy do lokalnego tworzenia projektów na podstawie szablonów.  
 > Każdy użytkownik może bezpiecznie korzystać z tego katalogu do eksperymentów, nie wpływając na zawartość repozytorium.
 
-## 📁 templates/
+## 📚 Dokumentacja
+Szczegóły użycia, opcji i przykładów znajdziesz w katalogu docs/:
 
-Ten katalog zawiera gotowe do użycia szablony startowe projektów w Pythonie. Możesz wygenerować nowy projekt, kopiując wybrany szablon do katalogu `projects/`.
-
-👉 Każdy szablon zawiera:
-- Główny skrypt (`main.py`)
-- Minimalny plik `requirements.txt`
-- Opcjonalny folder `.vscode` dla użytkowników Visual Studio Code
-
----
+* docs/init_project.md — dokumentacja skryptu inicjującego projekt
+* docs/setup_env.md — dokumentacja skryptu konfigurującego środowisko
+* docs/templates.md — opis i użycie szablonów
+* docs/usage_examples.md — przykładowe scenariusze i wskazówki
 
 ## 🧪 Testowanie szablonów bez generowania projektu
 
-Jeśli chcesz przetestować szablon startowy przed wygenerowaniem projektu:
+Możesz przetestować szablony przed utworzeniem projektu:
 
-1. Przejdź do wybranego katalogu szablonu, np.:
-
-   ```bash
-   cd templates/cli-app
-   ```
-
-2. Utwórz i aktywuj środowisko wirtualne:
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # W systemie Windows: venv\Scripts\activate
-   ```
-
-3. Zainstaluj wymagane zależności:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Uruchom plik startowy:
-
-   ```bash
-   python main.py hello Grzegorz
-   ```
-
-Każdy szablon zawiera własny plik `requirements.txt` z minimalnymi wymaganiami.
+```bash
+cd templates/cli-app       # lub gui-app, api-server
+python3 -m venv venv
+source venv/bin/activate   # Na Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python main.py [wymagane_argumenty]
+```
 
 ## 🤝 Współpraca
 
-- Masz pomysł lub zauważyłeś błąd? Otwórz zgłoszenie lub pull request.
-- Stosuj się do konwencji PEP8 i dokumentuj kod.
-- Współpraca mile widziana — szczegóły wkrótce w [CONTRIBUTING.md](CONTRIBUTING.md).
+Zapraszamy do zgłaszania błędów i pomysłów! Prosimy o zapoznanie się z [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 📜 Licencja
 
