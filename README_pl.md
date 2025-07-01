@@ -47,6 +47,10 @@ python-project-templates/
 └── projects/             # Wygenerowane projekty
 ```
 
+> **Uwaga:** Katalog `projects/` znajduje się na liście `.gitignore` i nie jest śledzony przez Git.  
+> Służy on do lokalnego tworzenia projektów na podstawie szablonów.  
+> Każdy użytkownik może bezpiecznie korzystać z tego katalogu do eksperymentów, nie wpływając na zawartość repozytorium.
+
 ## 📁 templates/
 
 Ten katalog zawiera gotowe do użycia szablony startowe projektów w Pythonie. Możesz wygenerować nowy projekt, kopiując wybrany szablon do katalogu `projects/`.

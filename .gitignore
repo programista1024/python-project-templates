@@ -3,6 +3,9 @@ venv/
 */venv/
 */.venv/
 
+# User projects (generated locally)
+projects/
+
 # Ignore Python cache files
 __pycache__/
 *.py[cod]

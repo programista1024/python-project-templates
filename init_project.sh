@@ -24,9 +24,44 @@ PROJECT_NAME=""
 TEMPLATE_NAME=""
 REINSTALL=false
 
+print_help() {
+    cat << EOF
+init_project.sh - Project initializer script
+
+Usage:
+  $0 --name <project_name> --template <template_name> [--reinstall]
+  $0 --interactive | -i
+  $0 --help | -h
+
+Options:
+  --name        Name of the new project
+  --template    Template to use (cli-app, gui-app, api-server)
+  --reinstall   Overwrite existing project if it exists
+  --interactive, -i   Run script in interactive mode
+  --help, -h    Show this help message and exit
+
+EOF
+}
+
+print_logo() {
+    cat << "EOF"
+PyTemplates v0.1
+Python Project Templates Initializer
+by programista1024.pl (c) 2025
+EOF
+}
+
+print_logo
+
+# --help
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    print_help
+    exit 0
+fi
+
 # Interactive mode
 if [[ "$1" == "--interactive" || "$1" == "-i" ]]; then
-    echo "🔧 Interactive mode"
+    echo "Interactive mode"
 
     # List of project templates
     templates=(cli-app gui-app api-server)
@@ -69,7 +104,10 @@ fi
 
 # Check for required arguments
 if [[ -z "$PROJECT_NAME" || -z "$TEMPLATE_NAME" ]]; then
-    echo "Missing required arguments. Use --name and --template or --interactive."
+    echo "Missing required arguments."
+    echo "Use: --name <project_name> --template <template_name>"
+    echo "Or run in interactive mode: --interactive"
+    echo "For help, run: $0 --help"
     exit 1
 fi
 
@@ -95,7 +133,7 @@ fi
 
 # Copying a project from selected template
 mkdir -p "$PROJECTS_DIR"
-cp -r "$SRC" "$DST"
+rsync -av --exclude 'venv' "$SRC/" "$DST/"
 
 echo "Project '$PROJECT_NAME' created using template '$TEMPLATE_NAME'."
 echo "Location: $DST"

@@ -47,6 +47,10 @@ python-project-templates/
 └── projects/             # Your generated projects go here
 ```
 
+> **Note:** The `projects/` folder is listed in `.gitignore` and is not tracked by Git.  
+> This folder is intended for locally generated projects based on the templates.  
+> Each user can safely use this directory to experiment without affecting the repository.
+
 ## 📁 templates/
 
 This directory contains ready-to-use Python starter templates. You can generate a new project by copying one of them into the `projects/` folder.
