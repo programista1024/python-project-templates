@@ -23,6 +23,9 @@ Inspired by common project initializers (like Spring Boot Initializer), this rep
 git clone https://github.com/programista1024/python-project-templates.git
 cd python-project-templates
 
+# Make sure the setup scripts are executable
+chmod +x setup_env.sh init_project.sh
+
 # Initialize a new project from a template
 ./init_project.sh --template cli-app --name my_cli_tool
 

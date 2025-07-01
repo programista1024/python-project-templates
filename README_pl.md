@@ -23,6 +23,9 @@ Projekt inspirowany popularnymi generatorami, takimi jak Spring Boot Initializer
 git clone https://github.com/programista1024/python-project-templates.git
 cd python-project-templates
 
+# Upewnij się, że skrypty są wykonywalne
+chmod +x setup_env.sh init_project.sh
+
 # Wygeneruj nowy projekt z szablonu
 ./init_project.sh --template gui-app --name moja_aplikacja
 
