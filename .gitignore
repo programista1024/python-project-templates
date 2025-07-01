@@ -4,7 +4,12 @@ venv/
 */.venv/
 
 # User projects (generated locally)
-projects/
+# Ignore everything in the projects folder...
+projects/*
+
+# ...except the folder itself and its README.md file
+!projects/
+!projects/README.md
 
 # Ignore Python cache files
 __pycache__/
