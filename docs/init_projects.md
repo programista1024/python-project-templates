@@ -1,1 +1,0 @@
-# Documentation for init_project.sh script
