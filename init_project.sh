@@ -1,20 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# =============================================================================
+# File:            init_project.sh
+# Description:     Generates a new Python project from a selected template
 #
-# File: init_project.sh
-# Description: Generates a new Python project from a selected template
-# Project: python-project-templates
-# Author: Grzegorz Wieczerzak (https://programista1024.pl)
-# License: MIT
-# Created: 2025-06-29
-# Version: 0.1.0
+# Project:         python-project-templates
+# Author:          Grzegorz Wieczerzak (https://programista1024.pl)
+# License:         MIT License
+#
+# Version:         0.1.0
+# Created:         2025-06-29
+# Last updated:    2025-07-17
 #
 # Usage:
 #   ./init_project.sh --name myapp --template cli-app
 #   ./init_project.sh --interactive
 #
+# See also:         CHANGES.md, CHANGELOG.md
+#
 # Change Log:
 #   2025-06-29 - v0.1.0 - Initial version with basic project creation and interactive mode
-#
+# =============================================================================
 set -e
 
 # Default values

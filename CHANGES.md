@@ -16,6 +16,8 @@ Tracks relevant functional and structural changes, with references to related te
 ### Updated
 - Refactored README into structured docs in `docs/`
 - Standardized file naming to kebab-case
+- setup_env.sh upgraded to v0.2.0 with support for --python-path [TEST: ENV-002]
+- init_project.sh header updated, but no functional changes — version remains at v0.1.0
 
 ---
 

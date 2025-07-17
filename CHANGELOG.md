@@ -1,5 +1,9 @@
 ## [v0.2.0] - 2025-07-17
 
+### Updated
+- setup_env.sh upgraded to v0.2.0 with support for --python-path
+- init_project.sh: no functional changes, version remains at v0.1.0
+
 ### Added
 - Introduced complete testing guideline under `docs/testing-guideline/`
 - Added reusable templates: business tests, test execution report, tester notes, mapping, regression checklist

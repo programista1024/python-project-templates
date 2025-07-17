@@ -1,24 +1,23 @@
 #!/usr/bin/env bash
 # =============================================================================
-# setup_env.sh - Python virtual environment and dependency setup script
+# File:            setup_env.sh
+# Description:     Sets up Python virtual environment and installs dependencies
 #
-# Project:        python-project-templates
-# Author:         Grzegorz Wieczerzak (programista1024.pl)
-# Version:        0.1.0
-# License:        MIT License
-# Created:        2025-07-01
-# Last updated:   2025-07-01
+# Project:         python-project-templates
+# Author:          Grzegorz Wieczerzak (https://programista1024.pl)
+# License:         MIT License
 #
-# Description:
-#   This script sets up a Python virtual environment for a given project
-#   and installs dependencies from requirements.txt. Supports reinstall
-#   and custom Python interpreter path.
+# Version:         0.2.0
+# Created:         2025-07-01
+# Last updated:    2025-07-17
 #
 # Usage:
 #   ./setup_env.sh [--reinstall] [--python-path /path/to/python] [--help]
 #
-# History:
-#   0.1.0 - Initial version with argument parsing and venv setup
+# See also:         CHANGES.md, CHANGELOG.md
+#
+# Change Log:
+#   2025-07-01 - v0.1.0 - Initial version with argument parsing and venv setup
 # =============================================================================
 
 set -e
