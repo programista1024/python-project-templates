@@ -1,3 +1,17 @@
+## [v0.2.0] - 2025-07-17
+
+### Added
+- Introduced complete testing guideline under `docs/testing-guideline/`
+- Added reusable templates: business tests, test execution report, tester notes, mapping, regression checklist
+- Added templates for issue tracking: todo, priority list, backlog
+- Added testing process guide (`testing-guide.md`) and technical specification (`testing-specification.md`)
+- Included naming convention file for consistent documentation structure
+
+### Documentation
+- Supplemental README files added to describe usage of templates and workflow
+
+#qa-docs-v1
+
 ## [v0.1.1] - 2025-07-16
 
 ### Documentation
